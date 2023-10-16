@@ -83,7 +83,8 @@ INSERT INTO produto_fornecedor (pf_prod_id, pf_forn_id) VALUES
 (10, 10);
 ```
 
-Crie uma view que mostra todos os produtos e suas respectivas marcas
+## Crie uma view que mostra todos os produtos e suas respectivas marcas
+
 ![](imgs/produtos_marcas.png)
 
 ```
@@ -103,7 +104,8 @@ INNER JOIN marcas m ON p.prd_marca_id = m.mrc_id;
 SELECT * FROM ViewProdutosEMarcas;
 ```
 
-Crie uma view que mostra todos os produtos e seus respectivos fornecedores
+## Crie uma view que mostra todos os produtos e seus respectivos fornecedores
+
 ![](imgs/produtos_fornecedores.png)
 
 ```
@@ -124,7 +126,7 @@ INNER JOIN fornecedores f ON pf.pf_forn_id = f.frn_id;
 SELECT * FROM ViewProdutosEFornecedores;
 ```
 
-Crie uma view que mostra todos os produtos e seus respectivos fornecedores e
+## Crie uma view que mostra todos os produtos e seus respectivos fornecedores e
 marcas
 
 ![](imgs/produtos_marcas_fornecedores.png)
@@ -149,7 +151,8 @@ INNER JOIN fornecedores f ON pf.pf_forn_id = f.frn_id;
 SELECT * FROM ViewProdutosFornecedoresEMarcas;
 ```
 
-Crie uma view que mostra todos os produtos com estoque abaixo do mínimo
+## Crie uma view que mostra todos os produtos com estoque abaixo do mínimo
+
 ![](imgs/produtos_nv_estoque.png)
 
 ```
@@ -157,14 +160,14 @@ CREATE VIEW ViewProdutosAbaixoDoNivelDeEstoque AS SELECT p.prd_nome FROM produto
 SELECT * FROM ViewProdutosAbaixoDoNivelDeEstoque;
 ```
 
-Adicione o campo data de validade
+## Adicione o campo data de validade
 
 ```
 ALTER TABLE produtos
 ADD prd_data_validade timestamp;
 ```
 
-Insira novos produtos com essa informação
+## Insira novos produtos com essa informação
 
 ```
 INSERT INTO produtos (prd_nome, prd_qtd_estoque, prd_estoque_min, prd_perecivel, prd_valor, prd_marca_id, prd_data_validade) VALUES
@@ -173,8 +176,9 @@ INSERT INTO produtos (prd_nome, prd_qtd_estoque, prd_estoque_min, prd_perecivel,
 ('Produto 13', 300, 5, 1, 5.50, 1,  "2022-08-13");
 ```
 
-Crie uma view que mostra todos os produtos e suas respectivas marcas com
+## Crie uma view que mostra todos os produtos e suas respectivas marcas com
 validade vencida
+
 ![](imgs/produtos_vencidos.png)
 
 ```
@@ -190,7 +194,8 @@ INNER JOIN marcas m ON p.prd_marca_id = m.mrc_id WHERE p.prd_data_validade < now
 SELECT * FROM ViewProdutosVencidos;
 ```
 
-Selecionar os produtos com preço acima da média
+## Selecionar os produtos com preço acima da média
+
 ![](imgs/acima_media_precos.png)
 
 ```
