@@ -84,6 +84,7 @@ INSERT INTO produto_fornecedor (pf_prod_id, pf_forn_id) VALUES
 ```
 
 Crie uma view que mostra todos os produtos e suas respectivas marcas
+![](img/produtos_marcas)
 
 ```
 CREATE VIEW ViewProdutosEMarcas AS
