@@ -84,7 +84,7 @@ INSERT INTO produto_fornecedor (pf_prod_id, pf_forn_id) VALUES
 ```
 
 Crie uma view que mostra todos os produtos e suas respectivas marcas
-![](img/produtos_marcas.png)
+![](imgs/produtos_marcas.png)
 
 ```
 CREATE VIEW ViewProdutosEMarcas AS
@@ -104,7 +104,7 @@ SELECT * FROM ViewProdutosEMarcas;
 ```
 
 Crie uma view que mostra todos os produtos e seus respectivos fornecedores
-![](img/produtos_fornecedores.png)
+![](imgs/produtos_fornecedores.png)
 
 ```
 CREATE VIEW ViewProdutosEFornecedores AS
@@ -127,7 +127,7 @@ SELECT * FROM ViewProdutosEFornecedores;
 Crie uma view que mostra todos os produtos e seus respectivos fornecedores e
 marcas
 
-![](img/produtos_marcas_fornecedores.png)
+![](imgs/produtos_marcas_fornecedores.png)
 
 ```
 CREATE VIEW ViewProdutosFornecedoresEMarcas AS
@@ -150,7 +150,7 @@ SELECT * FROM ViewProdutosFornecedoresEMarcas;
 ```
 
 Crie uma view que mostra todos os produtos com estoque abaixo do mínimo
-![](img/produtos_nv_estoque.png)
+![](imgs/produtos_nv_estoque.png)
 
 ```
 CREATE VIEW ViewProdutosAbaixoDoNivelDeEstoque AS SELECT p.prd_nome FROM produtos p WHERE p.prd_qtd_estoque < prd_estoque_min;
@@ -175,7 +175,7 @@ INSERT INTO produtos (prd_nome, prd_qtd_estoque, prd_estoque_min, prd_perecivel,
 
 Crie uma view que mostra todos os produtos e suas respectivas marcas com
 validade vencida
-![](img/produtos_vencidos.png)
+![](imgs/produtos_vencidos.png)
 
 ```
 CREATE VIEW ViewProdutosVencidos AS
@@ -191,7 +191,7 @@ SELECT * FROM ViewProdutosVencidos;
 ```
 
 Selecionar os produtos com preço acima da média
-![](img/acima_media_precos.png)
+![](imgs/acima_media_precos.png)
 
 ```
 SELECT p.prd_nome, p.prd_valor, AVG(p.prd_valor) FROM produtos p WHERE p.prd_valor;
