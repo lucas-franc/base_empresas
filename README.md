@@ -1,6 +1,6 @@
 # produtos
 
-Reproduza a base de dados apresentada no slide 21 desta tarefa
+## Reproduza a base de dados apresentada no slide 21 desta tarefa
 
 ```
 create table marcas (
